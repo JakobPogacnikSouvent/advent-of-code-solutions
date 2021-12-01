@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Python",
+            "type": "shell",
+            "group": "build",
+            "windows": {
+                "command": "python -i \\\"${file}\\\""
+            },
+            "linux": {
+                "command": "python -i \"${file}\""
+            },
+            "osx": {
+                "command": "python -i \"${file}\""
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OCaml",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\Jakob\\.opam\\4.12.0+mingw64c\\bin\\ocaml.exe -init \\\"${file}\\\""
+            },
+            "linux": {
+                "command": "ocaml -init \"${file}\""
+            },
+            "osx": {
+                "command": "ocaml -init \"${file}\""
+            },
+            "problemMatcher": []
+        },      
+        {
+            "label": "OCaml Day 0",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\Jakob\\.opam\\4.12.0+mingw64c\\bin\\ocaml.exe \\\"${file}\\\" 0"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "OCaml Day 1",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "windows": {
+                "command": "C:\\OCaml64\\usr\\local\\bin\\ocaml-env.exe exec -- C:\\OCaml64\\home\\Jakob\\.opam\\4.12.0+mingw64c\\bin\\ocaml.exe \\\"${file}\\\" 1"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
