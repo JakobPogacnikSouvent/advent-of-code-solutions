@@ -1,8 +1,8 @@
-let f =
-    let x = ref 0 in
-    for i = 0 to 9 do
-        for j = 0 to 9 do
-            x := !x + 1
-        done
-    done;
-    string_of_int !x
+let f a b =
+    let rec f acc i =
+    match i with
+    | 0 -> acc
+    | _ -> 
+        match acc with
+            | [] -> f (1 :: []) i-1
+            | x :: xs -> f ((x+1) :: x :: xs)
